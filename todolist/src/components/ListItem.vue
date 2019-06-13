@@ -45,6 +45,7 @@ export default {
     },
 
     type_icon(type) {
+      if (!type) return this.icon[3];
       return this.icon[type - 1];
     }
   }
