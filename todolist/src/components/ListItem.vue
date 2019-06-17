@@ -61,6 +61,7 @@ export default {
   width: 120px;
   height: 120px;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 button {
@@ -114,7 +115,7 @@ button:active {
 .icon2,
 .icon3,
 .icon4 {
-  margin: 10px auto 5px auto;
+  margin: 10px auto 5px;
   width: 50px;
   height: 50px;
   background-size: 100%;

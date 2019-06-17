@@ -31,10 +31,12 @@
           <input type="radio" name="type" value="4" id="important" v-model="current.type">
           <label class="icon" for="important"><img src="../assets/important.png" title="重要事件"></label>
         </div>
-        <button type="submit" @click="toggle_continue(false)">确认</button>
+        <div class="addbtn">
+          <button type="submit" @click="toggle_continue(false)">确认</button>
+        </div>
       </div>
     </form>
-    <div class="task">
+    <div class="tasklist">
       <p v-if="todo_list.length">任务列表</p>
       <ListItem
         :todo="todo"
@@ -220,7 +222,7 @@ form {
 input[type="text"],
 input[type="datetime-local"],
 textarea,
-button {
+.additem button {
   display: block;
   outline: none;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -236,9 +238,9 @@ textarea {
   padding: 5px 5px;
 }
 
-button {
+.additem button {
   background: #fff;
-  margin: 16px auto;
+  margin: 0 auto;
   width: 100px;
   height: 50px;
 }
@@ -276,17 +278,21 @@ input[type="radio"] {
 }
 
 .prop {
-  margin: 16px 0;
+  margin-bottom: 16px;
 }
 
-.task {
+.tasklist {
   margin-top: 36px;
   border: 1px solid #1212;
   border-radius: 3px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-button, .icon {
+.additem .addbtn {
+  overflow: hidden;
+}
+
+.additem button, .icon {
   cursor: pointer;
 }
 
@@ -294,11 +300,11 @@ input[type="radio"]:checked + label {
   background: #1212;
 }
 
-button:hover {
+.additem button:hover {
   background: rgba(0, 0, 0, 0.04);
 }
 
-button:active {
+.additem button:active {
   background: rgba(0, 0, 0, 0.08);
 }
 </style>
