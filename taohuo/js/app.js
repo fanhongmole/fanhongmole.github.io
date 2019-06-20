@@ -1,14 +1,28 @@
 $(function () {
     'use strict';
     /* 获取页面中的所有input */
-    var $inputs = $('[data-rule]');
-    var inputs = [];
+    var $inputs = $('[data-rule]'),
+        inputs = [],
+        $form = $('#signform');
     $inputs.each(function (_index, node) {
         var tmp = new Input(node);
         inputs.push(tmp);
     });
 
-    
+    $form.on('submit', function (e) {
+        e.preventDefault();
+        $inputs.trigger('blur');
+        for (var i = 0; i < inputs.length; i++) {
+            var item = inputs[i],
+                r = item.validator.is_valid();
+            if (!r) {
+                alert('请填写正确信息');
+                return;
+            }
+        }
+    });
+
+
     /* 测试input接口 */
     /* 
     // 获取并传输input的选择器

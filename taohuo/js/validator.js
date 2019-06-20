@@ -12,8 +12,7 @@ $(function () {
                 return true;
 
             for (key in rule) {
-                if (key === 'required')
-                    continue;
+                if (key === 'required') continue;
                 var r = this['validata_' + key]();
                 if (!r) return false;
             }

@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="col-md-4 signform">
-                    <form>
+                    <form id="signform">
                         <div class="form-header">
                             <h1>注册界面</h1>
                         </div>
@@ -124,7 +124,7 @@
                         </div>
                         <div class="input-item">
                             <div class="input-group input-group-lg">
-                                <input data-rule="max:999|min:0" name="age" type="text" id="age" class="form-control"
+                                <input data-rule="max:999|min:0|numeric:true" name="age" type="text" id="age" class="form-control"
                                     placeholder="Age">
                                 <label for="age" class="input-group-btn">年龄</label>
                             </div>
@@ -132,11 +132,11 @@
                         </div>
                         <div class="input-item">
                             <div class="input-group input-group-lg">
-                                <input data-rule="maxlength:15|minlength:3|numeric" name="gender" type="text" id="gender"
-                                    class="form-control" placeholder="Gender">
-                                <label for="gender" class="input-group-btn">电话</label>
+                                <input data-rule="maxlength:15|minlength:3|numeric:true" name="phone" type="text" id="phone"
+                                    class="form-control" placeholder="Phone">
+                                <label for="phone" class="input-group-btn">电话</label>
                             </div>
-                            <label id="gender-warning" class="warning">电话格式错误</label>
+                            <label id="phone-warning" class="warning">电话格式错误</label>
                         </div>
                         <small class="terms">
                             注册即视为同意
