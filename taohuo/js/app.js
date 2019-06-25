@@ -19,6 +19,7 @@ $(function () {
                 alert('请填写正确信息');
                 return;
             }
+            alert('注册成功！');
         }
     });
 
